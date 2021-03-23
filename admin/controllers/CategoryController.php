@@ -8,7 +8,7 @@
 
 namespace app\admin\controllers;
 
-use app\admin\Category;
+use app\models\Category;
 use yii\web\Controller;
 
 class CategoryController extends Controller
