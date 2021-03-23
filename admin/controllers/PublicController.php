@@ -15,7 +15,7 @@ use yii\web\Controller;
 
 class PublicController extends Controller
 {
-    //登录
+    //登录222
     public function actionLogin()
     {
         $this->layout = false;
