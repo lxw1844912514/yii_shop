@@ -105,7 +105,8 @@ class User extends ActiveRecord
         if ($this->load($data) && $this->validate()) {
             $lifetime = $this->rememberMe ? 24 * 3600 : 0;
             $session = \Yii::$app->session;
-            session_set_cookie_params($lifetime);
+            session_name($lifetime);
+            //session_set_cookie_params($lifetime); php 7.2 废弃
             $session['loginname'] = $this->loginname;
             $session['isLogin'] = 1;
             return (bool)$session['isLogin'];

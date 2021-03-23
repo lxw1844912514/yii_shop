@@ -73,7 +73,8 @@ class Manager extends ActiveRecord
             //todo::
             $lifetime = $this->rememberMe ? 24 * 3600 : 0;
             $session = \Yii::$app->session;
-            session_set_cookie_params($lifetime);
+            session_name($lifetime);
+           // session_set_cookie_params($lifetime);
 
             $session['admin'] = [
                 'adminuser' => $this->adminuser,
